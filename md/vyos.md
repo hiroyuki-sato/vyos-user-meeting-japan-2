@@ -477,7 +477,8 @@ compat     copyright  README  README.source  source
 
 ## Makefile
 
-Makefileを作る。やっていることはwgetしてファイルをコピーするだけ
+* Makefileを作る。
+* やっていることはwgetしてファイルをコピーするだけ
 
 ```
 VERSION="2.2.1"
@@ -547,7 +548,9 @@ vyos-zabbix-agents  # <<-- この行
 
 ## コマンド拡張
 
-https://github.com/hiroyuki-sato/vyos-cmd-template をご利用ください。
+* テンプレートを公開
+* https://github.com/hiroyuki-sato/vyos-cmd-template
+* debuild -us -usでパッケージができる。
 
 * template-cfg以下には、設定コマンド
 * template-op以下には、showなどのコマンド
