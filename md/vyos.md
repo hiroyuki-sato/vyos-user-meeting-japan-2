@@ -10,14 +10,33 @@ VyOS Users Meeting Japan #1
 
 ---
 
+## 自己紹介
 
-## この資料の目的
-
-これからVyOSを触ろうという皆様へバグ修正や開発の仕方をさらっとお伝えする。
+* 佐藤 博之(さとう ひろゆき)
+* twitter: @hiroysato
+* GitHUB: https://github.com/hiroyuki-sato
+* 営業
 
 ---
 
-## VyOSを改造する動機
+## VyOSへの小さな貢献
+
+* SCP不具合の修正(そこそこ動くように)
+* setup-vyos-build-env 作成
+* vyatta-cfg-qosのヘルプ修正 heliumで取り込まれる。
+* (元は@ebikenさんのレポート)
+* Wikiページ(Rebuild VyOS kernel Step)の作成
+* (日本語版Wiki: VyOSカーネルのコンパイル方法)
+
+---
+
+## この資料の目的
+
+* VyOSのバグ修正や開発の仕方をさらっとお伝えする。
+
+---
+
+## VyOSを修正・拡張する動機
 
 * 新しい機能を追加したい。
 * バグを修正したい。
@@ -25,7 +44,7 @@ VyOS Users Meeting Japan #1
 
 ---
 
-## 開発ができるようになるまで流れ
+## 開発の流れ
 
 * 開発に必要なツールや言語はなにか？
 * 開発環境を構築する
@@ -35,7 +54,7 @@ VyOS Users Meeting Japan #1
 
 ## 開発に必要なツールや言語
 
-* 開発用のOSについて知る
+* 開発用の環境(OS)
 * 利用する言語やツール
 * 主な情報収集サイト
 
@@ -45,7 +64,6 @@ VyOS Users Meeting Japan #1
 
 * Debian 6 (squeeze)
 * [インストールイメージ](http://ftp.riken.jp/Linux/debian/debian/dists/squeeze/main/installer-amd64/20110106+squeeze4+b5/images/netboot/)
-* ネットにアクセスできれば最小構成でOK
 
 ---
 
@@ -55,13 +73,14 @@ VyOS Users Meeting Japan #1
 * Python: 次期バックエンドで利用されている。
 * bash sedなど: 簡単な設定ファイルの修正
 * C言語: カーネルや、ルーティングソフトウェアなど
-* Git: 分散バージョン管理(http://progit-ja.github.io)
+* Git: 分散バージョン管理
 
 ---
 
 ## Git学習オススメ
 
-![Pro Git](/images/git-pro.png)
+http://progit-ja.github.io
+![Pro Git](images/git-pro.png)
 
 ---
 
@@ -88,7 +107,7 @@ VyOS Users Meeting Japan #1
 
 ## メインサイト
 
-![www.vyos.net](/images/vyos_net.png)
+![www.vyos.net](images/vyos_net.png)
 
 ---
 
@@ -96,7 +115,7 @@ VyOS Users Meeting Japan #1
 
 https://www.github.com/vyos
 
-![https://www.github.com/vyos](/images/github.png)
+![https://www.github.com/vyos](images/github.png)
 
 ---
 
@@ -104,49 +123,49 @@ https://www.github.com/vyos
 
 http://bugzilla.vyos.net
 
-![http://bugzilla.vyos.net](/images/bugzilla1.png)
+![http://bugzilla.vyos.net](images/bugzilla1.png)
 
 --
 
 ## Bugzilla2
 
-![http://bugzilla.vyos.net](/images/bugzilla2.png)
+![http://bugzilla.vyos.net](images/bugzilla2.png)
 
 --
 
 ## Bugzilla3
 
-![http://bugzilla.vyos.net](/images/bugzilla3.png)
+![http://bugzilla.vyos.net](images/bugzilla3.png)
 
 --
 
 ## Bugzilla4
 
-![http://bugzilla.vyos.net](/images/bugzilla4.png)
+![http://bugzilla.vyos.net](images/bugzilla4.png)
 
 --
 
 ## Bugzilla5
 
-![http://bugzilla.vyos.net](/images/bugzilla5.png)
+![http://bugzilla.vyos.net](images/bugzilla5.png)
 
 --
 
 ## Bugzilla6
 
-![http://bugzilla.vyos.net](/images/bugzilla6.png)
+![http://bugzilla.vyos.net](images/bugzilla6.png)
 
 --
 
 ## Bugzilla7
 
-![http://bugzilla.vyos.net](/images/bugzilla7.png)
+![http://bugzilla.vyos.net](images/bugzilla7.png)
 
 ---
 
 ## IRC
 
-![IRC](/images/IRC1.png)
+![IRC](images/IRC1.png)
 
 ---
 
@@ -164,7 +183,7 @@ http://bugzilla.vyos.net
 
 ## Debianの導入
 
-![Debian6](/images/debian.png)
+![Debian6](images/debian.png)
 
 ---
 
@@ -181,6 +200,24 @@ wget https://github.com/vyos/build-iso/blob/helium/tools/\# =>
      setup-vyos-build-env
 sudo sh setup-vyos-build-env
 ```
+
+---
+
+## 補足:プロジェクト名(1)
+
+出典: http://ja.wikipedia.org/wiki/周期表
+![periodic](images/periodic.png)
+
+---
+
+## 補足:プロジェクト名(2)
+
+* 現在のリリースバージョン: hydrogen
+* 開発バージョンは: helium
+* 次はlithium?
+
+
+
 
 ---
 
@@ -222,6 +259,8 @@ sudo make iso
 
 * 参考サイト: vyos.net—Rebuild_VyOS_kernel_Step
 * http://vyos.net/wiki/Rebuild_VyOS_kernel_Step
+* 日本語: VyOSカーネルのコンパイル方法
+* flavor = amd64-vyos, amd64-vyos-virt, 586-vyos, 586-vyos-virt
 
 ```
 branch=helium
@@ -262,7 +301,50 @@ make linux-image
 ## VyOS/Vyatta改造のバイブル
 
 http://www.slideshare.net/m-asama/vyatta
-![Vyatta改造入門](/images/vyatta_kaizou.png)
+![Vyatta改造入門](images/vyatta_kaizou.png)
+
+---
+
+## VyOSの構成
+
+* VyOSはbuild-isoでgitのサブモジュールを利用
+* サブモジュールで関連するパッケージを管理
+* 利用中のサブモジュール: build-iso内でgit submodule
+* 運用モードのプロジェクトはvyatta-op または vyatta-op-XXX
+* コマンドモードのプロジェクトはvyatta-cfg-xxx
+
+---
+
+## サブモジュール実行例
+
+```
+git submodule
+...
+-c66c7a29c87a161e8a57caad6ec1967f9dcaa97b pkgs/vyatta-cfg
+-cb8ef139982e3bae73d876cf37277dbfea6a2438 pkgs/vyatta-cfg-dhcp-relay
+-ed7c10135399320df5261ef8a2336cf8c28479fe pkgs/vyatta-cfg-dhcp-server
+-5c5c681ba53ec0f0a120806080071c0633812cf8 pkgs/vyatta-cfg-firewall
+...
+-34ae26d8b6423eaba2d3ad54943665cbd343a256 pkgs/vyatta-op
+-1006a1a2518c6721ea2370ac52ffc7a9311d4403 pkgs/vyatta-op-dhcp-server
+-3b1e4db385471a1334fb4c0f7c57ff4f06922e05 pkgs/vyatta-op-firewall
+-cd9c2fa6ec44453e894c6f80cde4134f10dd7255 pkgs/vyatta-op-qos
+
+```
+
+
+---
+
+## コマンド探索例
+
+次のコマンドを修正する場合
+
+```
+set traffic-policy shaper ICMP-OUTGOING bandwidth 500Mbps
+```
+
+vyatta-cfg-qos/templates/traffic-policy/shaper/node.tag/bandwidth/node.def
+をなおす。
 
 ---
 
@@ -273,13 +355,13 @@ http://www.slideshare.net/m-asama/vyatta
 
 ## zabbix-agents
 
-![zabbix-agents](/images/zabbix_agents1.png)
+![zabbix-agents](images/zabbix_agents1.png)
 
 ---
 
 ## zabbix-agents
 https://github.com/hiroyuki-sato/vyos-zabbix-agents
-![zabbix-agents](/images/zabbix_agents2.png)
+![zabbix-agents](images/zabbix_agents2.png)
 
 ---
 
@@ -462,6 +544,16 @@ vyos-zabbix-agents  # <<-- この行
 ```
 
 ---
+
+## コマンド拡張
+
+https://github.com/hiroyuki-sato/vyos-cmd-template をご利用ください。
+
+* template-cfg以下には、設定コマンド
+* template-op以下には、showなどのコマンド
+
+---
+
 
 ## ご清聴ありがとうございました。
 
