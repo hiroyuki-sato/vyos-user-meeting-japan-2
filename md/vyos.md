@@ -15,6 +15,7 @@ VyOS Users Meeting Japan #1
 * 佐藤 博之(さとう ひろゆき)
 * twitter: @hiroysato
 * GitHUB: https://github.com/hiroyuki-sato
+* VyattaでInfinibandの対応してVyatta Usersで発表
 * 営業
 
 ---
@@ -557,6 +558,13 @@ vyos-zabbix-agents  # <<-- この行
 
 ---
 
+## バグを見つけた人へのお願い
+
+* 再現方法を詳しく教えて欲しい
+* テスター募集
+* こんなことで来たらいいなというのを教えて
+
+---
 
 ## ご清聴ありがとうございました。
 
