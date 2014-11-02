@@ -26,6 +26,7 @@ VyOS Users Meeting Japan #2
 * Create setup-vyos-build-env
 * Fix vyatta-cfg-qos shaper help [Bug #218] (Reported by @ebiken)
 * Write Wiki Rebuild VyOS kernel Step (also Japanese)
+* Write patches Packer for qemu-kvm. [GH#1407](https://github.com/mitchellh/packer/pull/1407)
 
 
 
@@ -71,6 +72,7 @@ After meeting, Debian guy adviced me.
 
 * cowbuilder Executes the specified pbuilder operation with cowdancer
 * pbuilder - personal package builder 
+* Note alternative solution debootstrap?
 
 ---
 
@@ -192,6 +194,13 @@ And make iso
 
 ---
 
+## Caution AMD Users
+
+* latest VyOS does not work properly on *AMD* CPU. 
+* VyOS 1.1.0, (1.0.5?)
+
+---
+
 ## VyOS Bug #345
 
 * Filed Bug #345 by @lina_taso [2014/10/12]
@@ -205,12 +214,11 @@ And make iso
 
 ---
 
-
 ![Bug345 filed](images/bug345_1.png)
 
 ---
 
-
+[Bug#345](http://bugzilla.vyos.net/show_bug.cgi?id=345)
 ![Bug345 detail](images/bug345_2.png)
 
 ---
@@ -241,4 +249,8 @@ And make iso
 * [Zabbix agent demo](http://komeiy.hatenablog.com/entry/2014/10/24/002107)
 * [How to setup](http://www.downtown.jp/~soukaku/archives/2014/0802_145203.html)
 
+
+---
+
+Thank you!!
 
