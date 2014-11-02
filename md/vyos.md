@@ -15,7 +15,7 @@ VyOS Users Meeting Japan #2
 * Hiroyuki Sato
 * twitter: @hiroysato
 * GitHUB: https://github.com/hiroyuki-sato
-* VyattaでInfinibandの対応してVyatta Usersで発表
+* Made Infiniband commands for Vyatta.
 * Sales
 
 ---
@@ -28,18 +28,13 @@ VyOS Users Meeting Japan #2
 * Write Wiki Rebuild VyOS kernel Step (also Japanese)
 
 
----
-
-## Main theme 
-
-Help each other for community development.
-
 
 ---
 
 ## Agenda
 
 * Setup Build environment on Debian jessie.
+* ssh-keygen segmentation fault bug #345
 * Zabbix agent for VyOS.
 
 
