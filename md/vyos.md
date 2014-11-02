@@ -51,7 +51,7 @@ VyOS Users Meeting Japan #2
 
 Feedback after previous meeting [#1](https://twitter.com/henrich/status/493300065822191617) [#2](https://twitter.com/hiroysato/status/495235218089848832)
 
-![](/images/pbuilder1.png)
+![](images/pbuilder1.png)
 
 
 ---
@@ -76,7 +76,7 @@ After meeting, Debian guy adviced me.
 
 ### Debian jessie VyOS environment
 
-![Overview](/images/pbuilder2.png)
+![Overview](images/pbuilder2.png)
 
 ---
 
@@ -206,22 +206,22 @@ And make iso
 ---
 
 
-![Bug345 filed](/images/bug345_1.png)
+![Bug345 filed](images/bug345_1.png)
 
 ---
 
 
-![Bug345 detail](/images/bug345_2.png)
+![Bug345 detail](images/bug345_2.png)
 
 ---
 
 
-![Bug345 detail](/images/bug345_3.png)
+![Bug345 detail](images/bug345_3.png)
 
 ---
 
 
-![Bug345 detail](/images/bug345_4.png)
+![Bug345 detail](images/bug345_4.png)
 
 ---
 
